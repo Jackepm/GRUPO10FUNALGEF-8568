@@ -31,4 +31,26 @@ public static class ClienteUtil
         clientes.Add(cliente);
     }
 
+    public static void ListarCliente()
+    {
+        Console.WriteLine("Lista de Clientes:");
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine(cliente.ToString());
+        }
+    }
 
+    public static void EliminarCliente(int dni)
+    {
+        var cliente = clientes.Find(c => c.Dni == dni);
+        if (cliente != null)
+        {
+            cliente.Remove(cliente);
+            Console.WriteLine($"Cliente {dni} eliminado.");
+        }
+        else
+        {
+            Console.WriteLine("Cliente no encontrado.");
+        }
+    }
+}
