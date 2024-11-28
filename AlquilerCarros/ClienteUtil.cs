@@ -22,4 +22,13 @@
     }
 }
 
+public static class ClienteUtil
+{
+    private static List<Cliente> clientes = new List<Cliente>();
+
+    public static void CrearCliente(Cliente cliente)
+    {
+        clientes.Add(cliente);
+    }
+
 
