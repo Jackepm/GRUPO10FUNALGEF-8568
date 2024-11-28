@@ -15,3 +15,17 @@
             Console.WriteLine(carro.ToString());
         }
     }
+    public static void EliminarCarro(string placa)
+    {
+        var carro = carros.Find(c => c.placa == placa);
+        if (carro != null)
+        {
+            carros.Remove(carro);
+            Console.WriteLine($"Carro {placa} eliminado.");
+        }
+        else
+        {
+            Console.WriteLine("Carro no encontrado.");
+        }
+    }
+}
