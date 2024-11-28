@@ -7,3 +7,11 @@
         carros.Add(carro);
     }
 
+    public static void ListarCarro()
+    {
+        Console.WriteLine("Lista de Carros:");
+        foreach (var carro in carros)
+        {
+            Console.WriteLine(carro.ToString());
+        }
+    }
